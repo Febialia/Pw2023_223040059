@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="X-UA-Compatible"
+      content="IE=edge"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>contact</title>
+
+    <!-- font awesome cdn link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- custom css file link -->
+    <link
+      rel="stylesheet"
+      href="style.css"
+    />
+  </head>
+
+  <body>
+    <!-- header section starts -->
+    <header class="header">
+      <section class="flex">
+        <a href="home.html" class="logo">
+          <i class="fa fa-cutlery" aria-hidden="true"></i> 
+          Kulinary</a>
+
+        <nav class="navbar">
+          <a href="home.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="menu.html">Menu</a>
+          <a href="orders.html">Orders</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="icons">
+          <a href="search.html"><i class="fa-solid fa-magnifying-glass"></i></a>
+          <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i><span>(3)</span></a>
+          <div
+            id="user-btn"
+            class="fa-solid fa-user"
+          ></div>
+          <div
+            id="menu-btn"
+            class="fa-solid fa-bars"
+          ></div>
+        </div>
+
+        <div class="profile">
+          <p class="name">Febi Alia Rahman</p>
+          <div class="flex">
+            <a
+              href="profile.html"
+              class="btn"
+              >Profile</a
+            >
+            <a
+              href="#"
+              class="delete-btn"
+              >Logout</a
+            >
+          </div>
+          <p class="account"><a href="login.html">Login</a> or <a href="register.html">Register</a></p>
+        </div>
+      </section>
+    </header>
+
+    <!-- header sectioon ends -->
+
+    <div class="heading">
+      <h3>Contact Kami</h3>
+      <p><a href="home.html">Home</a> <span> / Contact</span></p>
+    </div>
+
+
+     <!-- Contact section starts -->
+    <section class="contact">
+      <div class="row">
+        <div class="image">
+          <img
+            src="image/contact-img.png"
+            alt=""
+          />
+        </div>
+
+        <form
+          action=""
+          method="post"
+        >
+          <h3>Beritahu kami</h3>
+          <input
+            type="text"
+            name="name"
+            maxlength="50"
+            class="box"
+            placeholder="enter your name"
+            required
+          />
+          <input
+            type="number"
+            name="number"
+            min="0"
+            max="999999999999999"
+            class="box"
+            placeholder="enter your number"
+            required
+            onkeypress="if (this.value.length == 10) return false;"
+          />
+          <input
+            type="email"
+            name="email"
+            maxlength="50"
+            class="box"
+            placeholder="enter your email"
+            required
+          />
+          <textarea
+            name="msg"
+            class="box"
+            required
+            placeholder="enter your massage"
+            maxlength="500"
+            cols="30"
+            rows="10"
+          ></textarea>
+          <input
+            type="submit"
+            value="send massage"
+            name="send"
+            class="btn"
+          />
+        </form>
+      </div>
+    </section>
+    <!-- Contact section ends -->
+    
+
+
+
+    <!-- footer section starts -->
+    <footer class="footer">
+      <section class="grid">
+        <div class="box">
+          <img
+            src="image/email-icon.png"
+            alt=""
+          />
+          <h3>Email Kami</h3>
+          <a href="mailto:febialia149@gmail.com">febialia149@gmail.com</a>
+          <a href="mailto:febi.223040059@mail.unpas.ac.id">febi.223040059@mail.unpas.ac.id</a>
+          <br>
+          <br>
+        </div>
+
+        <div class="box">
+          <img
+            src="image/clock-icon.png"
+            alt=""
+          />
+          <h3>Jam Buka</h3>
+          <p>Weekday 08:00AM - 22:00 WIB</p>
+          <p>Weekend 08:00AM - 23:00 WIB</p>
+          <br>
+          <br>
+        </div>
+
+        <div class="box">
+          <img
+            src="image/map-icon.png"
+            alt=""
+          />
+          <h3>Alamat Kami</h3>
+
+          <a href="https://goo.gl/maps/koVoYbKj2TfrUpkX8">Jl. Dr. Setiabudi No.193, Gegerkalong, Kec. Sukasari, Kota Bandung, Jawa Barat.</a>
+        </div>
+
+        <div class="box">
+          <img
+            src="image/phone-icon.png"
+            alt=""
+          />
+          <h3>Nomor Telepon </h3>
+          <a href="tel:+6283874379818">+62838-7437-9818</a>
+          <a href="https://wa.link/xmd7oo">+62838-7437-9818</a>
+          <br>
+          <br>
+          
+        </div>
+      </section>
+
+      <div class="credit">Created by <span>Febi Alia Rahman</span> | 223040059 Tubes 2023</div>
+    </footer>
+    <!-- footer sectioon ends -->
+
+    <!-- custom js file link -->
+    <script src="script.js"></script>
+  </body>
+</html>

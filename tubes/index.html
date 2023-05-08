@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport"
+      content="width=device-width, initial-scale=1.0"/>
+    <title>culinary</title>
+
+    <link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+
+    <!-- font awesome cdn link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- custom css file link -->
+    <link
+      rel="stylesheet"
+      href="style.css"
+    />
+  </head>
+
+  <body>
+    <!-- header section starts -->
+    <header class="header">
+      <section class="flex">
+        <a href="#home" class="logo">
+          <i class="fa fa-cutlery" aria-hidden="true">
+          </i>Culinary
+        </a>
+
+        <nav class="navbar">
+          <a href="index.html">Home</a>
+          <a href="about.html">Tentang</a>
+          <a href="menu.html">Menu</a>
+          <a href="orders.html">Pesanan</a>
+          <a href="#contact">Kontak</a>
+        </nav>
+
+        <div class="icons">
+          <a href="search.html"><i class="fa-solid fa-magnifying-glass"></i></a>
+          <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i><span>(3)</span></a>
+          <div id="user-btn" class="fa-solid fa-user"></div>
+          <div id="menu-btn" class="fa-solid fa-bars"></div>
+        </div>
+
+        <div class="profile">
+          <p class="name">Febi Alia Rahman</p>
+          <div class="flex">
+            <a href="profile.html" class="btn">Profile</a>
+            <a href="#" class="delete-btn">Logout</a>
+          </div>
+          <p class="account"><a href="login.html">Login</a> or <a href="register.html">Register</a></p>
+        </div>
+      </section>
+    </header>
+
+    <!-- header sectioon ends -->
+
+    <!-- hero section starts -->
+    <section class="hero" id="home">
+      <div class="swiper hero-slider">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide slide">
+            <div class="content">
+              <span>Order Online</span>
+              <h3>Rendang</h3>
+              <a href="menu.html" class="btn">Lihat Menu</a>
+            </div>
+            <div class="image">
+              <img src="image/home-img-1-rendang.png"alt=""/>
+            </div>
+          </div>
+
+          <div class="swiper-slide slide">
+            <div class="content">
+              <span>Order Online</span>
+              <h3>Nasi Kuning</h3>
+              <a href="menu.html" class="btn">Lihat Menu</a>
+            </div>
+            <div class="image">
+              <img src="image/home-img-2-nasikuning.png" alt=""/>
+            </div>
+          </div>
+
+          <div class="swiper-slide slide">
+            <div class="content">
+              <span>Order Online</span>
+              <h3>Sate</h3>
+              <a href="menu.html" class="btn">Lihat Menu</a>
+            </div>
+            <div class="image">
+              <img src="image/home-img-3-sate.png" alt=""/>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+    <!-- hero sectioon ends -->
+
+    <!-- category section starts -->
+    <section class="category">
+      <h1 class="title">Kategori Makanan</h1>
+
+      <div class="box-container">
+        <a href="category.html" class="box">
+          <img src="image/food-01.png" alt=""/>
+          <h3>Main Dishes</h3>
+        </a>
+
+        <a
+          href="category.html"
+          class="box"
+        >
+          <img
+            src="image/food-02.png"
+            alt=""
+          />
+          <h3>Minuman</h3>
+        </a>
+
+        <a
+          href="category.html"
+          class="box"
+        >
+          <img
+            src="image/food-03.png"
+            alt=""
+          />
+          <h3>Dessert</h3>
+        </a>
+      </div>
+    </section>
+    <!-- category sectioon ends -->
+
+    <!-- home products section starts -->
+    <section class="products">
+      <h1 class="title">Menu Terbaru</h1>
+
+      <div class="box-container">
+        <form
+          accept=""
+          method="post"
+          class="box"
+        >
+          <button
+            type="submit"
+            class="fas fa-eye"
+            name="quick_view"
+          ></button>
+          <button
+            type="submit"
+            class="fa-solid fa-cart-shopping"
+            name="add_to_cart"
+          ></button>
+          <img
+            src="image/pro-food-01.png"
+            alt=""
+          />
+          <a
+            href="#"
+            class="cat"
+            >Main Dishes</a
+          >
+          <div class="nama">Bakso Solo 1</div>
+          <div class="flex">
+            <div class="price"><span>IDR </span> 25K</div>
+            <input
+              type="number"
+              name="qty"
+              class="qty"
+              min="1"
+              max="100"
+              value="1"
+              onkeypress="if(this.value.length == 2) return false"
+            />
+          </div>
+        </form>
+
+        <form
+          accept=""
+          method="post"
+          class="box"
+        >
+          <button
+            type="submit"
+            class="fas fa-eye"
+            name="quick_view"
+          ></button>
+          <button
+            type="submit"
+            class="fa-solid fa-cart-shopping"
+            name="add_to_cart"
+          ></button>
+          <img
+            src="image/pro-drink-01.png"
+            alt=""
+          />
+          <a
+            href="#"
+            class="cat"
+            >Minuman</a
+          >
+          <div class="nama">Teh Talua 1</div>
+          <div class="flex">
+            <div class="price"><span>IDR </span> 20K</div>
+            <input
+              type="number"
+              name="qty"
+              class="qty"
+              min="1"
+              max="100"
+              value="1"
+              onkeypress="if(this.value.length == 2) return false"
+            />
+          </div>
+        </form>
+
+        <form
+          accept=""
+          method="post"
+          class="box"
+        >
+          <button
+            type="submit"
+            class="fas fa-eye"
+            name="quick_view"
+          ></button>
+          <button
+            type="submit"
+            class="fa-solid fa-cart-shopping"
+            name="add_to_cart"
+          ></button>
+          <img
+            src="image/pro-dessert-01.png"
+            alt=""
+          />
+          <a
+            href="#"
+            class="cat"
+            >Dessert</a
+          >
+          <div class="nama">Kue lapis</div>
+          <div class="flex">
+            <div class="price"><span>IDR </span> 20K</div>
+            <input
+              type="number"
+              name="qty"
+              class="qty"
+              min="1"
+              max="100"
+              value="1"
+              onkeypress="if(this.value.length == 2) return false"
+            />
+          </div>
+        </form>
+
+        <form
+          accept=""
+          method="post"
+          class="box"
+        >
+          <button
+            type="submit"
+            class="fas fa-eye"
+            name="quick_view"
+          ></button>
+          <button
+            type="submit"
+            class="fa-solid fa-cart-shopping"
+            name="add_to_cart"
+          ></button>
+          <img
+            src="image/pro-food-02.png"
+            alt=""
+          />
+          <a
+            href="#"
+            class="cat"
+            >Dishes</a
+          >
+          <div class="nama">Nasi Goreng Ayam 2</div>
+          <div class="flex">
+            <div class="price"><span>IDR </span> 20K</div>
+            <input
+              type="number"
+              name="qty"
+              class="qty"
+              min="1"
+              max="100"
+              value="1"
+              onkeypress="if(this.value.length == 2) return false"
+            />
+          </div>
+        </form>
+
+        <form
+          accept=""
+          method="post"
+          class="box"
+        >
+          <button
+            type="submit"
+            class="fas fa-eye"
+            name="quick_view"
+          ></button>
+          <button
+            type="submit"
+            class="fa-solid fa-cart-shopping"
+            name="add_to_cart"
+          ></button>
+          <img
+            src="image/pro-drink-02.png"
+            alt=""
+          />
+          <a
+            href="#"
+            class="cat"
+            >Drinks</a
+          >
+          <div class="nama">Cendol Dawet 2</div>
+          <div class="flex">
+            <div class="price"><span>IDR </span> 15K</div>
+            <input
+              type="number"
+              name="qty"
+              class="qty"
+              min="1"
+              max="100"
+              value="1"
+              onkeypress="if(this.value.length == 2) return false"
+            />
+          </div>
+        </form>
+
+        <form
+          accept=""
+          method="post"
+          class="box"
+        >
+          <button
+            type="submit"
+            class="fas fa-eye"
+            name="quick_view"
+          ></button>
+          <button
+            type="submit"
+            class="fa-solid fa-cart-shopping"
+            name="add_to_cart"
+          ></button>
+          <img
+            src="image/pro-dessert-02.png"
+            alt=""
+          />
+          <a
+            href="#"
+            class="cat"
+            >Dessert</a
+          >
+          <div class="nama">Onde-Onde 2</div>
+          <div class="flex">
+            <div class="price"><span>IDR </span> 20K</div>
+            <input
+              type="number"
+              name="qty"
+              class="qty"
+              min="1"
+              max="100"
+              value="1"
+              onkeypress="if(this.value.length == 2) return false"
+            />
+          </div>
+        </form>
+
+        <form
+          accept=""
+          method="post"
+          class="box"
+        >
+          <button
+            type="submit"
+            class="fas fa-eye"
+            name="quick_view"
+          ></button>
+          <button
+            type="submit"
+            class="fa-solid fa-cart-shopping"
+            name="add_to_cart"
+          ></button>
+          <img
+            src="image/pro-food-03.png"
+            alt=""
+          />
+          <a
+            href="#"
+            class="cat"
+            >Dishes</a
+          >
+          <div class="nama">Soto Lamongan 3</div>
+          <div class="flex">
+            <div class="price"><span>IDR </span> 20K</div>
+            <input
+              type="number"
+              name="qty"
+              class="qty"
+              min="1"
+              max="100"
+              value="1"
+              onkeypress="if(this.value.length == 2) return false"
+            />
+          </div>
+        </form>
+
+        <form
+          accept=""
+          method="post"
+          class="box"
+        >
+          <button
+            type="submit"
+            class="fas fa-eye"
+            name="quick_view"
+          ></button>
+          <button
+            type="submit"
+            class="fa-solid fa-cart-shopping"
+            name="add_to_cart"
+          ></button>
+          <img
+            src="image/pro-drink-03.png"
+            alt=""
+          />
+          <a
+            href="#"
+            class="cat"
+            >Drinks</a
+          >
+          <div class="nama">Bajigur 3</div>
+          <div class="flex">
+            <div class="price"><span>IDR </span> 18K</div>
+            <input
+              type="number"
+              name="qty"
+              class="qty"
+              min="1"
+              max="100"
+              value="1"
+              onkeypress="if(this.value.length == 2) return false"
+            />
+          </div>
+        </form>
+
+        <form
+          accept=""
+          method="post"
+          class="box"
+        >
+          <button
+            type="submit"
+            class="fas fa-eye"
+            name="quick_view"
+          ></button>
+          <button
+            type="submit"
+            class="fa-solid fa-cart-shopping"
+            name="add_to_cart"
+          ></button>
+          <img
+            src="image/pro-dessert-03.png"
+            alt=""
+          />
+          <a
+            href="#"
+            class="cat"
+            >Dessert</a
+          >
+          <div class="nama">Kue Kemplang</div>
+          <div class="flex">
+            <div class="price"><span>IDR </span> 20K</div>
+            <input
+              type="number"
+              name="qty"
+              class="qty"
+              min="1"
+              max="100"
+              value="1"
+              onkeypress="if(this.value.length == 2) return false"
+            />
+          </div>
+        </form>
+      </div>
+
+      <div class="more-btn" id="about">
+        <a
+          href="menu.html"
+          class="btn"
+          >Lihat semua</a
+        >
+      </div>
+    </section>
+    <!-- home products sectioon ends -->
+
+
+
+    
+
+    
+
+
+
+  
+
+
+
+
+    <!-- footer section starts -->
+    <footer class="footer">
+      <section class="grid">
+        <div class="box">
+          <img
+            src="image/email-icon.png"
+            alt=""
+          />
+          <h3>Email Kami</h3>
+          <a href="mailto:febialia149@gmail.com">febialia149@gmail.com</a>
+          <a href="mailto:febi.223040059@mail.unpas.ac.id">febi.223040059@mail.unpas.ac.id</a>
+          <br>
+          <br>
+        </div>
+
+        <div class="box">
+          <img
+            src="image/clock-icon.png"
+            alt=""
+          />
+          <h3>Jam Buka</h3>
+          <p>Weekday 08:00AM - 22:00 WIB</p>
+          <p>Weekend 08:00AM - 23:00 WIB</p>
+          <br>
+          <br>
+        </div>
+
+        <div class="box">
+          <img
+            src="image/map-icon.png"
+            alt=""
+          />
+          <h3>Alamat Kami</h3>
+
+          <a href="https://goo.gl/maps/koVoYbKj2TfrUpkX8">Jl. Dr. Setiabudi No.193, Gegerkalong, Kec. Sukasari, Kota Bandung, Jawa Barat.</a>
+        </div>
+
+        <div class="box">
+          <img
+            src="image/phone-icon.png"
+            alt=""
+          />
+          <h3>Nomor Telepon </h3>
+          <a href="tel:+6283874379818">+62838-7437-9818</a>
+          <a href="https://wa.link/xmd7oo">+62838-7437-9818</a>
+          <br>
+          <br>
+          
+        </div>
+      </section>
+
+      <div class="credit">Created by <span>Febi Alia Rahman</span> | 223040059 Tubes 2023</div>
+    </footer>
+    <!-- footer sectioon ends -->
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <!-- custom js file link -->
+    <script src="script.js"></script>
+
+    <script>
+      var swiper = new Swiper('.hero-slider', {
+        loop: true,
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      });
+    </script>
+  </body>
+</html>
