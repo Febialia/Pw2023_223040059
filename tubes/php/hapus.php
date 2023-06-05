@@ -6,12 +6,12 @@ $id = htmlspecialchars($_GET['id']);
 
 if (hapus($id) > 0) {
     echo "<script>
-    alert('data berhasil dihapus!');
+    alert('data deleted successfully!');
     document.location.href = '../admin/products.php';
     </script>";
 } else {
     echo "<script>
-    alert('data gagal dihapus!');
+    alert('data falied to deleted!');
     document.location.href = '../admin/products.php';
     </script>";
 }

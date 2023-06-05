@@ -34,10 +34,12 @@ if (isset($_POST["Search"])) {
       <table class="table">
         <thead>
           <tr>
+          <tr>
             <th scope="col">No.</th>
-            <th scope="col">Gambar</th>
-            <th scope="col">Nama</th>
-            <th scope="col">Harga</th>
+            <th scope="col">Picture</th>
+            <th scope="col">Name</th>
+            <th scope="col">Price</th>
+          </tr>
           </tr>
         </thead>
         <tbody>
@@ -49,10 +51,10 @@ if (isset($_POST["Search"])) {
 
               <td><?= $product["nama"]; ?></td>
               <td><?= $product["harga"]; ?></td>
-              <td>
-                <a href="../php/tambah.php?id=<?= $product['id']; ?>" onclick="return confirm ('Add?')">Add</a> |
-                <a href="../php/ubah.php?id=<?= $product['id']; ?>" onclick="return confirm ('edit product!')">Edit</a> |
-                <a href="../php/hapus.php?id=<?= $product['id']; ?>" onclick="return confirm ('Delate?')">Delate</a>
+              <td style="font-size: 25px;">
+                <a href="../php/tambah.php?id=<?= $product['id']; ?>" onclick="return confirm ('Add?')" style="color:green;"><i class="fas fa-plus-circle"></i></a> |
+                <a href="../php/ubah.php?id=<?= $product['id']; ?>" onclick="return confirm ('edit product!')"><i class="fas fa-edit"></i></a> |
+                <a href="../php/hapus.php?id=<?= $product['id']; ?>" onclick="return confirm ('Delate?') " style="color:red;"><i class="fas fa-trash-alt"></i></a>
               </td>
             </tr>
           <?php endforeach; ?>
@@ -74,7 +76,6 @@ if (isset($_POST["Search"])) {
 
         <li><a class="#" href="../admin/category.php"><i class="fa fa-shopping-basket"></i> Category</a></li>
         <li><a class="#" href="../admin/products.php"><i class="fa fa-shopping-bag"></i> Products</a></li>
-        <li><a class="#" href="../admin/user.php"><i class="fa fa-user-circle"></i>User</a></li>
         <li><a class="#" href="../php/logout.php"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="25" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
               <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z" />
               <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z" />

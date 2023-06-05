@@ -34,12 +34,12 @@ if (isset($_POST['ubah'])) {
     <link rel="stylesheet" href="../admin/style_admin.css">
 </head>
 
-<body >
-    <main >
+<body>
+    <main>
         <section>
 
             <div class="container mt-3" style="margin-left: 300px; ">
-                <h1 style="margin-top: -200px;">Ubah products</h1>
+                <h1 style="margin-top: -200px;">Edit products</h1>
 
                 <div class="row">
                     <div class="col-md-8">
@@ -50,19 +50,19 @@ if (isset($_POST['ubah'])) {
                                 <input type="text" class="form-control" name="no" id="no" maxlength="9" autofocus required value="<?= $product['no']; ?>">
                             </div>
                             <div class="mb-3">
-                                <label for="gambar" class="form-label">Gambar</label>
+                                <label for="gambar" class="form-label">Picture</label>
                                 <input type="text" class="form-control" name="gambar" id="gambar" value="<?= $product['gambar']; ?>">
                             </div>
                             <div class="mb-3">
-                                <label for="nama" class="form-label">Nama</label>
+                                <label for="nama" class="form-label">Name</label>
                                 <input type="text" class="form-control" name="nama" id="nama" value="<?= $product['nama']; ?>">
                             </div>
                             <div class="mb-3">
-                                <label for="email" class="form-label">Harga</label>
+                                <label for="email" class="form-label">Price</label>
                                 <input type="text" class="form-control" name="harga" id="harga" value="<?= $product['harga']; ?>">
                             </div>
 
-                            <button class="btn btn-primary" type="submit" name="ubah">Ubah Data</button>
+                            <button class="btn btn-primary" type="submit" name="ubah" style="background-color: #b2744c; border:#b2744c;">Edit Data</button>
                         </form>
                     </div>
                 </div>
@@ -81,15 +81,14 @@ if (isset($_POST['ubah'])) {
                 Admin
             </div>
 
-            <ul >
+            <ul>
 
                 <li><a class="#" href="../admin/category.php"><i class="fa fa-shopping-basket"></i> Category</a></li>
                 <li><a class="#" href="../admin/products.php"><i class="fa fa-shopping-bag"></i> Products</a></li>
-                <li><a class="#" href="../admin/user.php"><i class="fa fa-user-circle"></i>User</a></li>
                 <li><a class="#" href="../php/logout.php"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="25" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z" />
-                    <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z" />
-                </svg><span style="margin-left: 15px;">Logout</span> </a></li>
+                            <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z" />
+                            <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z" />
+                        </svg><span style="margin-left: 15px;">Logout</span> </a></li>
                 <li></li>
             </ul>
         </div>
