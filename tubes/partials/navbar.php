@@ -1,3 +1,4 @@
+
 <nav class="navbar navbar-expand-lg" id="navbar">
   <div class="container-fluid">
     <a class="navbar-brand" href="#" id="logo"><img src="./imag/logo.png" alt=""></a>
@@ -28,22 +29,9 @@
 
 
       </ul>
-      <form class="d-flex" method="get" action="">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="keyword">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
+      
 
-      <?php
-      // Periksa apakah ada input pencarian yang diberikan
-      if (isset($_GET['keyword'])) {
-        $keyword = $_GET['keyword'];
-
-        // Lakukan operasi pencarian yang sesuai menggunakan keyword yang diberikan
-        // Misalnya, Anda dapat menggunakan database atau melakukan pencarian dalam struktur data lainnya
-        // Di sini, kita hanya mencetak pesan sederhana dengan kata kunci yang diberikan
-        echo "Hasil Pencarian untuk: " . $keyword;
-      }
-      ?>
+      
 
 
 

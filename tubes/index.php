@@ -1,6 +1,6 @@
 <!-- header section -->
 <?php
-require_once('connect.php');
+require_once('php/connect.php');
 
 include 'partials/header.php'; ?>
 <!-- header section -->
@@ -16,7 +16,7 @@ include 'partials/header.php'; ?>
     <p>Get it with various attractive discounted prices
       <br>Check our website!
     </p>
-    <button id="btn">Shop Now</button>
+
   </div>
 </section>
 
@@ -90,25 +90,24 @@ include 'partials/header.php'; ?>
 
 
 <!-- menu -->
+
+
 <section class="menu" id="menu">
   <div class="container">
     <div class="heading3">Menu</div>
   </div>
+
+
+
   <div class="container" id="container2">
     <div class="row">
       <div class="col-md-3 py-3 py-md-0">
         <div class="card">
           <img src="./imag/menu-1.jpg" alt="">
           <div class="card-body">
-            <div class="star text-center">
-              <i class="fa-regular fa-star"></i>
-              <i class="fa-regular fa-star"></i>
-              <i class="fa-regular fa-star"></i>
-              <i class="fa-regular fa-star"></i>
-              <i class="fa-regular fa-star"></i>
-            </div>
+
             <h3>Lapis Legit</h3>
-            <p>IDR 50 <strike>IDR 75</strike> <span><i class="fa-solid fa-cart-shopping"></i></span></p>
+            <p>IDR 50K <strike>IDR 75K</strike></p>
           </div>
         </div>
       </div>
@@ -116,15 +115,9 @@ include 'partials/header.php'; ?>
         <div class="card">
           <img src="./imag/menu-2.jpeg" alt="">
           <div class="card-body">
-            <div class="star text-center">
-              <i class="fa-regular fa-star"></i>
-              <i class="fa-regular fa-star"></i>
-              <i class="fa-regular fa-star"></i>
-              <i class="fa-regular fa-star"></i>
-              <i class="fa-regular fa-star"></i>
-            </div>
+
             <h3>French Bakery</h3>
-            <p>IDR 45 <strike>IDR 50</strike> <span><i class="fa-solid fa-cart-shopping"></i></span></p>
+            <p>IDR 45K <strike>IDR 50K</strike> </p>
           </div>
         </div>
       </div>
@@ -132,15 +125,9 @@ include 'partials/header.php'; ?>
         <div class="card">
           <img src="./imag/menu-3.jpg" alt="">
           <div class="card-body">
-            <div class="star text-center">
-              <i class="fa-regular fa-star"></i>
-              <i class="fa-regular fa-star"></i>
-              <i class="fa-regular fa-star"></i>
-              <i class="fa-regular fa-star"></i>
-              <i class="fa-regular fa-star"></i>
-            </div>
+
             <h3>Pie Susu</h3>
-            <p>IDR 35 <strike>IDR 45</strike> <span><i class="fa-solid fa-cart-shopping"></i></span></p>
+            <p>IDR 35 <strike>IDR 45</strike></p>
           </div>
         </div>
       </div>
@@ -148,15 +135,9 @@ include 'partials/header.php'; ?>
         <div class="card">
           <img src="./imag/menu-4.jpg" alt="">
           <div class="card-body">
-            <div class="star text-center">
-              <i class="fa-regular fa-star"></i>
-              <i class="fa-regular fa-star"></i>
-              <i class="fa-regular fa-star"></i>
-              <i class="fa-regular fa-star"></i>
-              <i class="fa-regular fa-star"></i>
-            </div>
+
             <h3>Bapia</h3>
-            <p>IDR 20 <strike>IDR 40</strike> <span><i class="fa-solid fa-cart-shopping"></i></span></p>
+            <p>IDR 20 <strike>IDR 40</strike> </p>
           </div>
         </div>
       </div>
@@ -165,17 +146,11 @@ include 'partials/header.php'; ?>
     <div class="row" style="margin-top: 50px;">
       <div class="col-md-3 py-3 py-md-0">
         <div class="card">
-          <img src="./imag/menu-8.jpg" alt="">
+          <img src="./imag/menu-5.jpg" alt="">
           <div class="card-body">
-            <div class="star text-center">
-              <i class="fa-regular fa-star"></i>
-              <i class="fa-regular fa-star"></i>
-              <i class="fa-regular fa-star"></i>
-              <i class="fa-regular fa-star"></i>
-              <i class="fa-regular fa-star"></i>
-            </div>
-            <h3>Surabi</h3>
-            <p>IDR 35 <strike>IDR 50</strike> <span><i class="fa-solid fa-cart-shopping"></i></span></p>
+
+            <h3>Serabi</h3>
+            <p>IDR 35 <strike>IDR 50</strike> </p>
           </div>
         </div>
       </div>
@@ -183,15 +158,9 @@ include 'partials/header.php'; ?>
         <div class="card">
           <img src="./imag/menu-6.jpg" alt="">
           <div class="card-body">
-            <div class="star text-center">
-              <i class="fa-regular fa-star"></i>
-              <i class="fa-regular fa-star"></i>
-              <i class="fa-regular fa-star"></i>
-              <i class="fa-regular fa-star"></i>
-              <i class="fa-regular fa-star"></i>
-            </div>
+
             <h3>Kue Buaya</h3>
-            <p>IDR 175 <strike>IDR 250</strike> <span><i class="fa-solid fa-cart-shopping"></i></span></p>
+            <p>IDR 175 <strike>IDR 250</strike> </p>
           </div>
         </div>
       </div>
@@ -199,15 +168,9 @@ include 'partials/header.php'; ?>
         <div class="card">
           <img src="./imag/menu-7.jpg" alt="">
           <div class="card-body">
-            <div class="star text-center">
-              <i class="fa-regular fa-star"></i>
-              <i class="fa-regular fa-star"></i>
-              <i class="fa-regular fa-star"></i>
-              <i class="fa-regular fa-star"></i>
-              <i class="fa-regular fa-star"></i>
-            </div>
+
             <h3>Cucur</h3>
-            <p>IDR 15 <strike>IDR 20</strike> <span><i class="fa-solid fa-cart-shopping"></i></span></p>
+            <p>IDR 15 <strike>IDR 20</strike> </p>
           </div>
         </div>
       </div>
@@ -215,15 +178,9 @@ include 'partials/header.php'; ?>
         <div class="card">
           <img src="./imag/menu-8.jpg" alt="">
           <div class="card-body">
-            <div class="star text-center">
-              <i class="fa-regular fa-star"></i>
-              <i class="fa-regular fa-star"></i>
-              <i class="fa-regular fa-star"></i>
-              <i class="fa-regular fa-star"></i>
-              <i class="fa-regular fa-star"></i>
-            </div>
+
             <h3>Putu Ayu</h3>
-            <p>IDR 5 <strike>IDR 10</strike> <span><i class="fa-solid fa-cart-shopping"></i></span></p>
+            <p>IDR 5 <strike>IDR 10</strike> </p>
           </div>
         </div>
       </div>
@@ -303,8 +260,8 @@ include 'partials/header.php'; ?>
         <p><i class="fa-solid fa-phone" href="https://wa.link/xmd7oo"></i> +62838-7437-9818</p>
         <p><i class="fa-solid fa-building-columns" href="https://goo.gl/maps/koVoYbKj2TfrUpkX8"></i> Jl. Dr. Setiabudi No.193, Gegerkalong, Kec. Sukasari, Kota Bandung, Jawa Barat.</p>
         <p>Open House
-          <br>Weekday 08:00AM - 22:00 WIB</br>
-          Weekend 08:00AM - 23:00 WIB
+          <br>Weekday 08:00AM - 22:00 PM</br>
+          Weekend 08:00AM - 23:00 PM
         </p>
       </div>
     </div>

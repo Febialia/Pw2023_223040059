@@ -1,5 +1,5 @@
 <?php
-require('connect.php');
+require('php/connect.php');
 
 session_start();
 
@@ -14,12 +14,18 @@ if (isset($_POST['submit'])) {
         $_SESSION['name'] = $name;
 
         if ($user[0]['level'] == 'Admin') {
-            header('Location: admin/dashboard.php');
+            header('Location: admin/products.php');
         } else {
-            header('Location: index.php');
+            echo "<script>
+            alert('Successfully Login');
+            document.location.href = 'index.php';
+            </script>";
         }
     } else {
-        header('Location: login.php');
+        echo "<script>
+            alert('Login Failed!');
+            document.location.href = 'login.php';
+            </script>";
     }
 }
 
@@ -52,7 +58,7 @@ if (isset($_POST['submit'])) {
 
     <div class="login-form">
         <div class="login">
-            <h2>Sign In</h2>
+            <h2>Login</h2>
 
             <form action="" method="post">
                 <div class="inputbox">
@@ -67,8 +73,9 @@ if (isset($_POST['submit'])) {
             </form>
 
             <div class="bottom-content">
-                <a href="#">Forgot Password</a>
-                <a href="register.php">Sign up</a>
+                <p>Don't have account?
+                    <a href="register.php">Register</a>
+                </p>
             </div>
 
         </div>

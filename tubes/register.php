@@ -1,5 +1,5 @@
 <?php
-require('connect.php');
+require('php/connect.php');
 
 if (isset($_POST['submit'])) {
     $conn = koneksi();
@@ -20,12 +20,23 @@ if (isset($_POST['submit'])) {
 
             mysqli_query($conn, $query) or die(mysqli_error($conn));
 
-            header('Location: login.php');
+            echo "<script>
+            alert('Successfully');
+            document.location.href = 'login.php';
+            </script>"; 
+
+            
         } else {
-            header('Location: register.php');
+            echo "<script>
+            alert('Your password is incorrect!!');
+            document.location.href = 'register.php';
+            </script>"; 
         }
     } else {
-        header('Location: register.php');
+        echo "<script>
+            alert('Your passwords do not match!!');
+            document.location.href = 'register.php';
+            </script>";
     }
 }
 ?>
@@ -52,7 +63,7 @@ if (isset($_POST['submit'])) {
 
     <div class="register-form">
         <div class="register">
-            <h2>Sign Up</h2>
+            <h2>Register</h2>
 
             <form action="" method="post">
                 <div class="inputbox">
@@ -71,7 +82,7 @@ if (isset($_POST['submit'])) {
 
             <div class="bottom-content">
                 <p>Already have an account?
-                    <a href="login.php">Sign In</a>
+                    <a href="login.php">Login</a>
                 </p>
             </div>
 
