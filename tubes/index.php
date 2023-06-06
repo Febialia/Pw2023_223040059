@@ -1,3 +1,21 @@
+<?php
+session_start();
+require('php/connect.php');
+
+if (!isset($_SESSION['login'])) {
+  header("Location: login.php");
+}
+
+if (isset($_POST['send'])) {
+    if (contactus($_POST) > 0) {
+        echo "<script>
+    alert('Succes!');
+    document.location.href = 'index.php';
+    </script>";
+    }
+}
+?>
+
 <!-- header section -->
 <?php
 require_once('php/connect.php');
@@ -37,14 +55,11 @@ include 'partials/header.php'; ?>
       <div class="col-md-6">
         <h3>What Makes Our Bakery Special?</h3>
         <p>The bread in our store is guaranteed to be hygienic, guaranteed to be cooked, and also tested halal.
-          <br><br>We also offer a variety of brownie menus, there are also traditional cakes.
-          <br><br>What are you waiting for, let's buy it now!
-
-
-
-
+          <br>We also offer a variety of brownie menus, there are also traditional cakes.
+          <br>What are you waiting for, let's buy it now!
+         
         </p>
-        <button id="about-btn">Learn More.</button>
+        
       </div>
     </div>
   </div>
@@ -248,11 +263,12 @@ include 'partials/header.php'; ?>
 
         <p>You need anything please contact us
         </p>
-
-        <input class="form-control" type="text" placeholder="Name" aria-label="default input example"><br>
-        <input class="form-control" type="email" placeholder="Email" aria-label="default input example"><br>
-        <input class="form-control" type="number" placeholder="Number" aria-label="default input example"><br>
-        <button id="contact-btn">Send Message</button>
+        <form action="" method="post" >
+          <input name="name" class="form-control" type="text" placeholder="Name" aria-label="default input example"><br>
+          <input name="email" class="form-control" type="email" placeholder="Email" aria-label="default input example"><br>
+          <input name="number" class="form-control" type="number" placeholder="Number" aria-label="default input example"><br>
+          <button type="submit" name="send" id="contact-btn">Send Message</button>
+        </form>
       </div>
       <div class="col-md-5" id="col">
         <h1>Info</h1>

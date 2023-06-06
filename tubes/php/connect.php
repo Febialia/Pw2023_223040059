@@ -51,24 +51,6 @@ function ubah($data)
   return mysqli_affected_rows($conn);
 }
 
-// function tambah($data)
-// {
-//   $conn = koneksi();
-
-//   $no = htmlspecialchars($data['no']);
-//   $gambar = htmlspecialchars($data['gambar']);
-//   $nama = htmlspecialchars($data['nama']);
-//   $harga = htmlspecialchars($data['harga']);
-
-//   $query = "INSERT INTO
-//   products
-//   VALUES (null, '$no', '$gambar', '$nama', '$harga', '1') ";
-
-//   mysqli_query($conn, $query) or die(mysqli_error($conn));
-
-//   return mysqli_affected_rows($conn);
-// }
-
 function hapus($id)
 {
   $conn = koneksi();
@@ -97,7 +79,6 @@ function ubah_user($data)
 {
   $conn = koneksi();
   $id = $data['id'];
-  $no = htmlspecialchars($data['no']);
   $nama = htmlspecialchars($data['nama']);
   $level = htmlspecialchars($data['level']);
 
@@ -106,8 +87,7 @@ function ubah_user($data)
   $query = "UPDATE  
               admin 
             SET
-            no = '$no',
-            nama ='$nama',
+            name ='$nama',
             level = '$level'
             
             WHERE id = '$id'
@@ -122,13 +102,12 @@ function tambah_user($data)
 {
   $conn = koneksi();
 
-  $no = htmlspecialchars($data['no']);
   $name = htmlspecialchars($data['name']);
   $level = htmlspecialchars($data['level']);
 
   $query = "INSERT INTO
-  'admin'
-  VALUES (null, '$no', '$name', '$level', '1') ";
+  admin
+  VALUES (null, '$name', 'password', '$level') ";
 
   mysqli_query($conn, $query) or die(mysqli_error($conn));
 
@@ -149,7 +128,7 @@ function hapus_user($id)
 function cari_user($data, $data2)
 {
   $conn = koneksi();
-  $query = "SELECT * FROM admin WHERE name LIKE'%$data%' AND admin_id LIKE '%$data2%'";
+  $query = "SELECT * FROM admin WHERE name LIKE'%$data%' AND id LIKE '%$data2%'";
   $result = mysqli_query($conn, $query);
 
   $rows = [];
@@ -157,4 +136,18 @@ function cari_user($data, $data2)
     $rows[] = $row;
   }
   return $rows;
+}
+
+function contactus($data)
+{
+  $conn = Koneksi();
+  $name = htmlspecialchars($data['name']);
+  $email = htmlspecialchars($data['email']);
+  $number = htmlspecialchars($data['number']);
+ 
+  $query = "INSERT INTO
+  contactus
+  VALUES (null, '$name', '$email', '$number') ";
+  mysqli_query($conn, $query) or die(mysqli_error($conn));
+  return mysqli_affected_rows($conn);
 }

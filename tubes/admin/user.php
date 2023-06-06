@@ -27,37 +27,48 @@ if (isset($_POST["Search"])) {
       <br>
 
       <br>
-      <form class="d-flex" method="post" action="" style="width:910px;">
+      <form class="d-flex mb-3" method="post" action="" style="width:910px;">
         <input name="keyword" class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="keyword">
         <button name="Search" class="btn btn-outline-success" type="submit">Search</button>
       </form>
-      <table class="table">
-        <thead>
-          <tr>
-          <tr>
-            <th scope="col">No.</th>
-            <th scope="col">Name</th>
-            <th scope="col">Level</th>
-          </tr>
-          </tr>
-        </thead>
-        <tbody>
-          <?php $i = 1;
-          foreach ($admin as $admin) : ?>
+      <?php if ($admin) : ?>
+        <table class="table">
+          <thead>
             <tr>
-              <th scope="row"><?= $i++; ?></th>
-              <td><?= $admin["name"]; ?></td>
-              <td><?= $admin["level"]; ?></td>
-        
-              <td style="font-size: 25px;">
-                <a href="../php/add_user.php?id=<?= $admin['id']; ?>" onclick="return confirm ('Add?')" style="color:green;"><i class="fas fa-plus-circle"></i></a> |
-                <a href="../php/ubah.php?id=<?= $admin['id']; ?>" onclick="return confirm ('edit user!')"><i class="fas fa-edit"></i></a> |
-                <a href="../php/hapus.php?id=<?= $admin['id']; ?>" onclick="return confirm ('Delate?') " style="color:red;"><i class="fas fa-trash-alt"></i></a>
-              </td>
+            <tr>
+              <th scope="col">No.</th>
+              <th scope="col">Name</th>
+              <th scope="col">Level</th>
             </tr>
-          <?php endforeach; ?>
-        </tbody>
-      </table>
+            </tr>
+          </thead>
+          <tbody>
+            <?php $i = 1;
+            foreach ($admin as $admin) : ?>
+              <tr>
+                <th scope="row"><?= $i++; ?></th>
+                <td><?= $admin["name"]; ?></td>
+                <td><?= $admin["level"]; ?></td>
+
+                <td style="font-size: 25px;">
+                  <a href="../php/add_user.php?id=<?= $admin['id']; ?>" onclick="return confirm ('Add?')" style="color:green;"><i class="fas fa-plus-circle"></i></a> |
+                  <a href="../php/edit_user.php?id=<?= $admin['id']; ?>" onclick="return confirm ('edit user!')"><i class="fas fa-edit"></i></a> |
+                  <a href="../php/hapus_user.php?id=<?= $admin['id']; ?>" onclick="return confirm ('Delate?') " style="color:red;"><i class="fas fa-trash-alt"></i></a>
+                </td>
+              </tr>
+            <?php endforeach; ?>
+          <?php else : ?>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="alert alert-danger" role="alert">
+                  User not found!
+                </div>
+              </div>
+            </div>
+
+          <?php endif; ?>
+          </tbody>
+        </table>
     </section>
 
     <input type="checkbox" id="check">
@@ -75,6 +86,7 @@ if (isset($_POST["Search"])) {
         <li><a class="#" href="../admin/category.php"><i class="fa fa-shopping-basket"></i> Category</a></li>
         <li><a class="#" href="../admin/products.php"><i class="fa fa-shopping-bag"></i> Products</a></li>
         <li><a class="#" href="../admin/user.php"><i class="fa fa-user-circle"></i>User</a></li>
+        <li><a class="#" href="../admin/contactus.php"><i class="fa-solid fa-message"></i>Contact Us</a></li>
         <li><a class="#" href="../php/logout.php"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="25" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
               <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z" />
               <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z" />
@@ -88,4 +100,3 @@ if (isset($_POST["Search"])) {
 </body>
 
 </html>
-

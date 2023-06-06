@@ -4,7 +4,7 @@ require('../php/connect.php');
 
 $id = htmlspecialchars($_GET['id']);
 
-if (hapus($id) > 0) {
+if (hapus_user($id) > 0) {
     echo "<script>
     alert('data deleted successfully!');
     document.location.href = '../admin/user.php';

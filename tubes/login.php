@@ -13,13 +13,14 @@ if (isset($_POST['submit'])) {
 
     if (count($user) > 0) {
         $_SESSION['name'] = $name;
+        $_SESSION['login'] = true;
 
         if ($user[0]['level'] == 'Admin') {
             header('Location: admin/category.php');
         } else {
             echo "<script>
             alert('Successfully Login');
-            document.location.href = 'welcome.php';
+            document.location.href = 'index.php';
             </script>";
         }
     } else {
@@ -27,7 +28,7 @@ if (isset($_POST['submit'])) {
             alert('Login Failed!');
             document.location.href = 'login.php';
             </script>";
-    }
+    }       
 }
 
 
