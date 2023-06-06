@@ -10,15 +10,16 @@ if (isset($_POST['submit'])) {
     $sql = "SELECT * FROM `admin` WHERE `name` = '{$name}' AND `password` = '{$password}'";
     $user = query($sql);
 
+
     if (count($user) > 0) {
         $_SESSION['name'] = $name;
 
         if ($user[0]['level'] == 'Admin') {
-            header('Location: admin/products.php');
+            header('Location: admin/category.php');
         } else {
             echo "<script>
             alert('Successfully Login');
-            document.location.href = 'index.php';
+            document.location.href = 'welcome.php';
             </script>";
         }
     } else {

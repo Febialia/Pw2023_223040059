@@ -2,7 +2,7 @@
 require('../php/connect.php');
 include '../partials/header.php';
 
-$name = 'Tambah Data Products';
+$name = 'Tambah Data User';
 
 
 
@@ -10,7 +10,7 @@ if (isset($_POST['tambah'])) {
     if (tambah($_POST) > 0) {
         echo "<script>
     alert('Succes!');
-    document.location.href = '../admin/products.php';
+    document.location.href = '../admin/user.php';
     </script>";
     }
 }
@@ -43,15 +43,11 @@ if (isset($_POST['tambah'])) {
                                 <input type="text" class="form-control" name="no" id="no" maxlength="9" autofocus required>
                             </div>
                             <div class="mb-3">
-                                <label for="gambar" class="form-label">Picture</label>
-                                <input type="text" class="form-control" name="gambar" id="gambar">
-                            </div>
-                            <div class="mb-3">
                                 <label for="nama" class="form-label">Name</label>
                                 <input type="text" class="form-control" name="nama" id="nama">
                             </div>
                             <div class="mb-3">
-                                <label for="email" class="form-label">Price</label>
+                                <label for="email" class="form-label">Level</label>
                                 <input type="text" class="form-control" name="harga" id="harga">
                             </div>
 

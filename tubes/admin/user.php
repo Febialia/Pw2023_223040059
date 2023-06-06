@@ -1,10 +1,10 @@
 <?php
 require('../php/connect.php');
 include '../partials/header.php';
-$product = query("SELECT * FROM products");
+$admin = query("SELECT * FROM admin");
 
 if (isset($_POST["Search"])) {
-  $product = cari_data($_POST["keyword"], '');
+  $admin = cari_user($_POST["keyword"], '');
 }
 ?>
 
@@ -23,7 +23,7 @@ if (isset($_POST["Search"])) {
 <body style="margin-left: 300px;">
   <main>
     <section>
-      <h1 style="margin-top: -140px;">Data Products</h1>
+      <h1 style="margin-top: -140px;">Data User</h1>
       <br>
 
       <br>
@@ -36,25 +36,23 @@ if (isset($_POST["Search"])) {
           <tr>
           <tr>
             <th scope="col">No.</th>
-            <th scope="col">Picture</th>
             <th scope="col">Name</th>
-            <th scope="col">Price</th>
+            <th scope="col">Level</th>
           </tr>
           </tr>
         </thead>
         <tbody>
           <?php $i = 1;
-          foreach ($product as $product) : ?>
+          foreach ($admin as $admin) : ?>
             <tr>
               <th scope="row"><?= $i++; ?></th>
-              <td><img src="../imag/<?= $product["gambar"]; ?>" width="45" height="45" style="object-fit: cover;" class="rounded-circle"></td>
-
-              <td><?= $product["nama"]; ?></td>
-              <td><?= $product["harga"]; ?></td>
+              <td><?= $admin["name"]; ?></td>
+              <td><?= $admin["level"]; ?></td>
+        
               <td style="font-size: 25px;">
-                <a href="../php/tambah.php?id=<?= $product['id']; ?>" onclick="return confirm ('Add?')" style="color:green;"><i class="fas fa-plus-circle"></i></a> |
-                <a href="../php/ubah.php?id=<?= $product['id']; ?>" onclick="return confirm ('edit product!')"><i class="fas fa-edit"></i></a> |
-                <a href="../php/hapus.php?id=<?= $product['id']; ?>" onclick="return confirm ('Delate?') " style="color:red;"><i class="fas fa-trash-alt"></i></a>
+                <a href="../php/add_user.php?id=<?= $admin['id']; ?>" onclick="return confirm ('Add?')" style="color:green;"><i class="fas fa-plus-circle"></i></a> |
+                <a href="../php/ubah.php?id=<?= $admin['id']; ?>" onclick="return confirm ('edit user!')"><i class="fas fa-edit"></i></a> |
+                <a href="../php/hapus.php?id=<?= $admin['id']; ?>" onclick="return confirm ('Delate?') " style="color:red;"><i class="fas fa-trash-alt"></i></a>
               </td>
             </tr>
           <?php endforeach; ?>
@@ -90,3 +88,4 @@ if (isset($_POST["Search"])) {
 </body>
 
 </html>
+
