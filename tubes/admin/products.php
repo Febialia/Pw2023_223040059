@@ -27,10 +27,9 @@ if (isset($_POST["Search"])) {
       <br>
 
       <br>
-      <form class="d-flex" method="post" action="" style="width:910px;">
+      <form class="d-flex" method="post" action="" style="width:965px;">
         <input name="keyword" id="keyword" class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="keyword">
-        <button name="Search" class="btn btn-outline-success" type="submit">Search</button>
-      </form>
+     </form>
       <table class="table">
         <thead>
           <tr>

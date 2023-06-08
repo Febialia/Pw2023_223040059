@@ -21,7 +21,7 @@ $contactus = query("SELECT * FROM contactus");
 <body style="margin-left: 300px;">
   <main>
     <section>
-      <h1 style="margin-top: -140px;">Massage User</h1>
+      <h1 style="margin-top: -140px;">Message User</h1>
       <br>
 
       <br>
