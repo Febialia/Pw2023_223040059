@@ -51,8 +51,8 @@ if (isset($_POST["Search"])) {
                 <td><?= $admin["level"]; ?></td>
 
                 <td style="font-size: 25px;">
-                  <a href="../php/add_user.php?id=<?= $admin['id']; ?>" onclick="return confirm ('Add?')" style="color:green;"><i class="fas fa-plus-circle"></i></a> |
-                  <a href="../php/edit_user.php?id=<?= $admin['id']; ?>" onclick="return confirm ('edit user!')"><i class="fas fa-edit"></i></a> |
+                  <a href="../php/tambah_user.php?id=<?= $admin['id']; ?>" onclick="return confirm ('Add?')" style="color:green;"><i class="fas fa-plus-circle"></i></a> |
+                  <a href="../php/ubah_user.php?id=<?= $admin['id']; ?>" onclick="return confirm ('edit user!')"><i class="fas fa-edit"></i></a> |
                   <a href="../php/hapus_user.php?id=<?= $admin['id']; ?>" onclick="return confirm ('Delate?') " style="color:red;"><i class="fas fa-trash-alt"></i></a>
                 </td>
               </tr>

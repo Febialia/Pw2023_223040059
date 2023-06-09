@@ -22,6 +22,8 @@ function query($query)
   return $rows;
 }
 
+
+// ubah product //
 function ubah($data)
 {
   $conn = koneksi();
@@ -51,6 +53,8 @@ function ubah($data)
   return mysqli_affected_rows($conn);
 }
 
+
+// hapus product //
 function hapus($id)
 {
   $conn = koneksi();
@@ -62,6 +66,7 @@ function hapus($id)
 }
 
 
+// cari data product //
 function cari_data($data, $data2)
 {
   $conn = koneksi();
@@ -75,6 +80,29 @@ function cari_data($data, $data2)
   return $rows;
 }
 
+
+// tambah product //
+function tambah($data)
+{
+  $conn = koneksi();
+
+  $no = htmlspecialchars($data['no']);
+  $gambar = htmlspecialchars($data['gambar']);
+  $nama = htmlspecialchars($data['nama']);
+  $harga = htmlspecialchars($data['harga']);
+
+  $query = "INSERT INTO
+ products
+ VALUES (null, '$no', '$gambar', '$nama', '$harga', '1') ";
+
+  mysqli_query($conn, $query) or die(mysqli_error($conn));
+
+  return mysqli_affected_rows($conn);
+}
+
+
+
+// ubah user //
 function ubah_user($data)
 {
   $conn = koneksi();
@@ -98,6 +126,8 @@ function ubah_user($data)
   return mysqli_affected_rows($conn);
 }
 
+
+// tambah user //
 function tambah_user($data)
 {
   $conn = koneksi();
@@ -114,6 +144,7 @@ function tambah_user($data)
   return mysqli_affected_rows($conn);
 }
 
+// hapus user //
 function hapus_user($id)
 {
   $conn = koneksi();
@@ -124,7 +155,7 @@ function hapus_user($id)
   return mysqli_affected_rows($conn);
 }
 
-
+// cari user //
 function cari_user($data, $data2)
 {
   $conn = koneksi();
@@ -138,13 +169,16 @@ function cari_user($data, $data2)
   return $rows;
 }
 
+
+
+// menampilkan data contactus //
 function contactus($data)
 {
   $conn = Koneksi();
   $name = htmlspecialchars($data['name']);
   $email = htmlspecialchars($data['email']);
   $number = htmlspecialchars($data['number']);
- 
+
   $query = "INSERT INTO
   contactus
   VALUES (null, '$name', '$email', '$number') ";

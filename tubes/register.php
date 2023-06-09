@@ -53,7 +53,7 @@ if (isset($_POST['submit'])) {
     <link rel="stylesheet" href="css/style.css">
     <style>
         .register-form {
-            background-image: url(./imag/bg_loginregis.jpg);
+            background-image: url(./img/bg_loginregis.jpg);
         }
     </style>
 

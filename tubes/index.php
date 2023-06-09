@@ -7,12 +7,12 @@ if (!isset($_SESSION['login'])) {
 }
 
 if (isset($_POST['send'])) {
-    if (contactus($_POST) > 0) {
-        echo "<script>
+  if (contactus($_POST) > 0) {
+    echo "<script>
     alert('Succes!');
     document.location.href = 'index.php';
     </script>";
-    }
+  }
 }
 ?>
 
@@ -49,7 +49,7 @@ include 'partials/header.php'; ?>
     <div class="row">
       <div class="col-md-6">
         <div class="card">
-          <img src="./imag/tiramisusu.webp" alt="">
+          <img src="./img/tiramisusu.webp" alt="">
         </div>
       </div>
       <div class="col-md-6">
@@ -57,9 +57,9 @@ include 'partials/header.php'; ?>
         <p>The bread in our store is guaranteed to be hygienic, guaranteed to be cooked, and also tested halal.
           <br>We also offer a variety of brownie menus, there are also traditional cakes.
           <br>What are you waiting for, let's buy it now!
-         
+
         </p>
-        
+
       </div>
     </div>
   </div>
@@ -78,19 +78,19 @@ include 'partials/header.php'; ?>
     <div class="row">
       <div class="col-md-4 py-3 py-md-0">
         <div class="card">
-          <img src="./imag/menu-6.jpg" alt="">
+          <img src="./img/menu-6.jpg" alt="">
 
         </div>
       </div>
       <div class="col-md-4 py-3 py-md-0">
         <div class="card">
-          <img src="./imag/menu-7.jpg" alt="">
+          <img src="./img/menu-7.jpg" alt="">
 
         </div>
       </div>
       <div class="col-md-4 py-3 py-md-0">
         <div class="card">
-          <img src="./imag/menu-8.jpg" alt="">
+          <img src="./img/menu-8.jpg" alt="">
 
         </div>
       </div>
@@ -109,7 +109,10 @@ include 'partials/header.php'; ?>
 
 <section class="menu" id="menu">
   <div class="container">
-    <div class="heading3">Menu</div>
+    <div class="heading3">Menu
+      
+    </div>
+    
   </div>
 
 
@@ -118,7 +121,7 @@ include 'partials/header.php'; ?>
     <div class="row">
       <div class="col-md-3 py-3 py-md-0">
         <div class="card">
-          <img src="./imag/menu-1.jpg" alt="">
+          <img src="./img/menu-1.jpg" alt="">
           <div class="card-body">
 
             <h3>Lapis Legit</h3>
@@ -128,7 +131,7 @@ include 'partials/header.php'; ?>
       </div>
       <div class="col-md-3 py-3 py-md-0">
         <div class="card">
-          <img src="./imag/menu-2.jpeg" alt="">
+          <img src="./img/menu-2.jpeg" alt="">
           <div class="card-body">
 
             <h3>French Bakery</h3>
@@ -138,7 +141,7 @@ include 'partials/header.php'; ?>
       </div>
       <div class="col-md-3 py-3 py-md-0">
         <div class="card">
-          <img src="./imag/menu-3.jpg" alt="">
+          <img src="./img/menu-3.jpg" alt="">
           <div class="card-body">
 
             <h3>Pie Susu</h3>
@@ -148,7 +151,7 @@ include 'partials/header.php'; ?>
       </div>
       <div class="col-md-3 py-3 py-md-0">
         <div class="card">
-          <img src="./imag/menu-4.jpg" alt="">
+          <img src="./img/menu-4.jpg" alt="">
           <div class="card-body">
 
             <h3>Bapia</h3>
@@ -161,7 +164,7 @@ include 'partials/header.php'; ?>
     <div class="row" style="margin-top: 50px;">
       <div class="col-md-3 py-3 py-md-0">
         <div class="card">
-          <img src="./imag/menu-5.jpg" alt="">
+          <img src="./img/menu-5.jpg" alt="">
           <div class="card-body">
 
             <h3>Serabi</h3>
@@ -171,7 +174,7 @@ include 'partials/header.php'; ?>
       </div>
       <div class="col-md-3 py-3 py-md-0">
         <div class="card">
-          <img src="./imag/menu-6.jpg" alt="">
+          <img src="./img/menu-6.jpg" alt="">
           <div class="card-body">
 
             <h3>Kue Buaya</h3>
@@ -181,7 +184,7 @@ include 'partials/header.php'; ?>
       </div>
       <div class="col-md-3 py-3 py-md-0">
         <div class="card">
-          <img src="./imag/menu-7.jpg" alt="">
+          <img src="./img/menu-7.jpg" alt="">
           <div class="card-body">
 
             <h3>Cucur</h3>
@@ -191,7 +194,7 @@ include 'partials/header.php'; ?>
       </div>
       <div class="col-md-3 py-3 py-md-0">
         <div class="card">
-          <img src="./imag/menu-8.jpg" alt="">
+          <img src="./img/menu-8.jpg" alt="">
           <div class="card-body">
 
             <h3>Putu Ayu</h3>
@@ -214,34 +217,34 @@ include 'partials/header.php'; ?>
   <div class="row" style="margin-top: 30px;">
     <div class="col-md-4 py-3 py-md-0">
       <div class="card">
-        <img src="./imag/menu-4.jpg" alt="">
+        <img src="./img/menu-4.jpg" alt="">
       </div>
     </div>
     <div class="col-md-4 py-3 py-md-0">
       <div class="card">
-        <img src="./imag/menu-1.jpg" alt="">
+        <img src="./img/menu-1.jpg" alt="">
       </div>
     </div>
     <div class="col-md-4 py-3 py-md-0">
       <div class="card">
-        <img src="./imag/menu-3.jpg" alt="">
+        <img src="./img/menu-3.jpg" alt="">
       </div>
     </div>
   </div>
   <div class="row" style="margin-top: 30px;">
     <div class="col-md-4 py-3 py-md-0">
       <div class="card">
-        <img src="./imag/menu-8.jpg" alt="">
+        <img src="./img/menu-8.jpg" alt="">
       </div>
     </div>
     <div class="col-md-4 py-3 py-md-0">
       <div class="card">
-        <img src="./imag/menu-7.jpg" alt="">
+        <img src="./img/menu-7.jpg" alt="">
       </div>
     </div>
     <div class="col-md-4 py-3 py-md-0">
       <div class="card">
-        <img src="./imag/menu-6.jpg" alt="">
+        <img src="./img/menu-6.jpg" alt="">
       </div>
     </div>
   </div>
@@ -263,7 +266,7 @@ include 'partials/header.php'; ?>
 
         <p>You need anything please contact us
         </p>
-        <form action="" method="post" >
+        <form action="" method="post">
           <input name="name" class="form-control" type="text" placeholder="Name" aria-label="default input example"><br>
           <input name="email" class="form-control" type="email" placeholder="Email" aria-label="default input example"><br>
           <input name="number" class="form-control" type="number" placeholder="Number" aria-label="default input example"><br>
