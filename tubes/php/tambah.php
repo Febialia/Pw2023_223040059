@@ -38,10 +38,7 @@ if (isset($_POST['tambah'])) {
                 <div class="row">
                     <div class="col-md-8">
                         <form action="" method="post">
-                            <div class="mb-3 w-25">
-                                <label for="nim" class="form-label">No</label>
-                                <input type="text" class="form-control" name="no" id="no" maxlength="9" autofocus required>
-                            </div>
+                            
                             <div class="mb-3">
                                 <label for="gambar" class="form-label">Picture</label>
                                 <input type="text" class="form-control" name="gambar" id="gambar">
