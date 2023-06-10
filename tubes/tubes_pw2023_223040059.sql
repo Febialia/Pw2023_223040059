@@ -32,7 +32,7 @@ CREATE TABLE `admin` (
   `name` varchar(20) NOT NULL,
   `password` varchar(50) NOT NULL,
   `level` enum('Admin','User') NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4  ;
 
 --
 -- Dumping data untuk tabel `admin`
@@ -53,7 +53,7 @@ INSERT INTO `admin` (`id`, `name`, `password`, `level`) VALUES
 CREATE TABLE `category` (
   `category_id` int NOT NULL,
   `category_name` varchar(150) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4  ;
 
 --
 -- Dumping data untuk tabel `category`
@@ -75,7 +75,7 @@ CREATE TABLE `contactus` (
   `message` varchar(500) NOT NULL,
   `email` varchar(50) NOT NULL,
   `number` varchar(15) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4  ;
 
 --
 -- Dumping data untuk tabel `contactus`
@@ -96,11 +96,11 @@ INSERT INTO `contactus` (`id`, `name`, `message`, `email`, `number`) VALUES
 
 CREATE TABLE `products` (
   `id` int NOT NULL,
-  `gambar` varchar(250) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
-  `nama` varchar(150) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
-  `harga` varchar(120) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `gambar` varchar(250) CHARACTER SET utf8mb4     DEFAULT NULL,
+  `nama` varchar(150) CHARACTER SET utf8mb4     DEFAULT NULL,
+  `harga` varchar(120) CHARACTER SET utf8mb4     DEFAULT NULL,
   `category_id` int NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4  ;
 
 --
 -- Dumping data untuk tabel `products`

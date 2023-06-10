@@ -73,7 +73,7 @@ if (isset($_POST['submit'])) {
                     <input type="password" placeholder="Password" name="password" required>
                 </div>
                 <div class="inputbox">
-                    <input type="text" placeholder="Confirm Password" name="confirm_password" required>
+                    <input type="password" placeholder="Confirm Password" name="confirm_password" required>
                 </div>
                 <div class="inputbox">
                     <input name="submit" type="submit" value="Register Now" id="btn" required>
