@@ -3,9 +3,7 @@ require('../php/connect.php');
 include '../partials/header.php';
 $admin = query("SELECT * FROM admin");
 
-if (isset($_POST["Search"])) {
-  $admin = cari_user($_POST["keyword"], '');
-}
+
 ?>
 
 <!DOCTYPE html>
@@ -27,10 +25,7 @@ if (isset($_POST["Search"])) {
       <br>
 
       <br>
-      <form class="d-flex mb-3" method="post" action="" style="width:910px;">
-        <input name="keyword" class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="keyword">
-        <button name="Search" class="btn btn-outline-success" type="submit">Search</button>
-      </form>
+     
       <?php if ($admin) : ?>
         <table class="table">
           <thead>

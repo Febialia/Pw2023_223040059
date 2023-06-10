@@ -34,7 +34,7 @@ if (isset($_POST["Search"])) {
         <thead>
           <tr>
           <tr>
-            <th scope="col">No.</th>
+           
             <th scope="col">Picture</th>
             <th scope="col">Name</th>
             <th scope="col">Price</th>
@@ -46,7 +46,7 @@ if (isset($_POST["Search"])) {
           foreach ($product as $product) : ?>
             <tr>
               <th scope="row"><?= $i++; ?></th>
-              <td><img src="../imag/<?= $product["gambar"]; ?>" width="45" height="45" style="object-fit: cover;" class="rounded-circle"></td>
+              <td><img src="../img/<?= $product["gambar"]; ?>" width="45" height="45" style="object-fit: cover;" class="rounded-circle"></td>
 
               <td><?= $product["nama"]; ?></td>
               <td><?= $product["harga"]; ?></td>

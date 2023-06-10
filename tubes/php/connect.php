@@ -155,19 +155,6 @@ function hapus_user($id)
   return mysqli_affected_rows($conn);
 }
 
-// cari user //
-function cari_user($data, $data2)
-{
-  $conn = koneksi();
-  $query = "SELECT * FROM admin WHERE name LIKE'%$data%' AND id LIKE '%$data2%'";
-  $result = mysqli_query($conn, $query);
-
-  $rows = [];
-  while ($row = mysqli_fetch_assoc($result)) {
-    $rows[] = $row;
-  }
-  return $rows;
-}
 
 
 
