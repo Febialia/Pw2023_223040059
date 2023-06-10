@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Waktu pembuatan: 08 Jun 2023 pada 15.38
+-- Waktu pembuatan: 10 Jun 2023 pada 17.55
 -- Versi server: 8.0.30
 -- Versi PHP: 8.1.10
 
@@ -41,10 +41,8 @@ CREATE TABLE `admin` (
 INSERT INTO `admin` (`id`, `name`, `password`, `level`) VALUES
 (1, 'admin', '111', 'Admin'),
 (2, 'User', '111', 'User'),
-(8, 'febi alia rahman', 'aaa', 'User'),
-(9, 'aku s', 'sa', 'User'),
-(11, 'febi alia', '111', 'User'),
-(12, 'Febi Alia Rahman ', 'user', 'Admin');
+(11, 'febi alia rahmann', '111', 'User'),
+(18, 'febi alia ', 'password', 'User');
 
 -- --------------------------------------------------------
 
@@ -74,6 +72,7 @@ INSERT INTO `category` (`category_id`, `category_name`) VALUES
 CREATE TABLE `contactus` (
   `id` int NOT NULL,
   `name` varchar(50) NOT NULL,
+  `message` varchar(500) NOT NULL,
   `email` varchar(50) NOT NULL,
   `number` varchar(15) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
@@ -82,11 +81,12 @@ CREATE TABLE `contactus` (
 -- Dumping data untuk tabel `contactus`
 --
 
-INSERT INTO `contactus` (`id`, `name`, `email`, `number`) VALUES
-(1, 'febi alia rahman f', 'febialia14987@gmail.com', '08'),
-(2, 'gdgdgdg', 'febi149@gmail.com', '0888'),
-(3, 'eeeeee', 'a149@gmail.com', '333'),
-(4, 'nhbbh', 'hnh@gfvfv.com', '9999');
+INSERT INTO `contactus` (`id`, `name`, `message`, `email`, `number`) VALUES
+(1, 'febi alia rahman ', '0', 'febialia14987@gmail.com', '0858757575'),
+(5, 'febi alia', '0', 'febi59@gmail.com', '08444718178'),
+(6, 'sss', '', 'febi59@gmail.com', '08847747474'),
+(7, 'ddd', '', 'febialia14966@gmail.com', '0847775775775'),
+(8, 'febi alia rahman nanna', 'hhhdbdbbd hdbdbdh dbdbdbd dhdhduirrr', 'febi5119@gmail.com', '099888383');
 
 -- --------------------------------------------------------
 
@@ -96,7 +96,6 @@ INSERT INTO `contactus` (`id`, `name`, `email`, `number`) VALUES
 
 CREATE TABLE `products` (
   `id` int NOT NULL,
-  `no` int NOT NULL,
   `gambar` varchar(250) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
   `nama` varchar(150) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
   `harga` varchar(120) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
@@ -107,13 +106,17 @@ CREATE TABLE `products` (
 -- Dumping data untuk tabel `products`
 --
 
-INSERT INTO `products` (`id`, `no`, `gambar`, `nama`, `harga`, `category_id`) VALUES
-(1, 0, 'menu-1.jpg', 'Lapis Legit', '50K', 1),
-(2, 2, 'menu-2.jpeg', 'French Bakery', '45K', 2),
-(12, 3, 'menu-3.jpg', 'Pie Susu', '37K', 1),
-(13, 4, 'menu-4.jpg', 'Bapia', '20K', 1),
-(15, 6, 'menu-6.jpg', 'Kue Buaya', '175K', 2),
-(16, 7, 'menu-7.jpg', 'Cucur', '15K', 1);
+INSERT INTO `products` (`id`, `gambar`, `nama`, `harga`, `category_id`) VALUES
+(1, 'menu-4.jpg ', 'Lapis Legit', '50K', 1),
+(2, 'menu-2.jpeg', 'French Bakery', '45K', 2),
+(12, 'menu-3.jpg', 'Pie Susu', '37K', 1),
+(13, '6484b66e7cffa.png', 'Bapia', '20K', 1),
+(15, 'menu-6.jpg', 'Roti Buaya', '175K', 2),
+(16, 'menu-7.jpg', 'Cucur', '15K', 1),
+(36, 'menu-5.jpg ', 'serabi', '78', 1),
+(47, 'menu-4.jpg  ', 'jjjj', '99', 1),
+(48, '6484b6d8b617d.png', 'hhdhhdh', '67', 1),
+(51, '6484b6be8c18a.png', 'hhhh', '999', 1);
 
 --
 -- Indexes for dumped tables
@@ -152,7 +155,7 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT untuk tabel `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT untuk tabel `category`
@@ -164,13 +167,13 @@ ALTER TABLE `category`
 -- AUTO_INCREMENT untuk tabel `contactus`
 --
 ALTER TABLE `contactus`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT untuk tabel `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
 
 --
 -- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)

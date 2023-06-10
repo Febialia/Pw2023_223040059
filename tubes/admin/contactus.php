@@ -21,7 +21,7 @@ $contactus = query("SELECT * FROM contactus");
 <body style="margin-left: 300px;">
   <main>
     <section>
-      <h1 style="margin-top: -140px;">Contact User</h1>
+      <h1 style="margin-top: -140px;">Message User</h1>
       <br>
 
       <br>
@@ -32,6 +32,7 @@ $contactus = query("SELECT * FROM contactus");
           <tr>
             <th scope="col">No.</th>
             <th scope="col">Name</th>
+            <th scope="col">Message</th>
             <th scope="col">Email</th>
             <th scope="col">Number</th>
           </tr>
@@ -43,6 +44,7 @@ $contactus = query("SELECT * FROM contactus");
             <tr>
               <th scope="row"><?= $i++; ?></th>
               <td><?= $contactus["name"]; ?></td>
+              <td><?= $contactus["message"]; ?></td>
               <td><?= $contactus["email"]; ?></td>
               <td><?= $contactus["number"]; ?></td>
               

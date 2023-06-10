@@ -43,15 +43,12 @@ if (isset($_POST['ubah'])) {
 
                 <div class="row">
                     <div class="col-md-8">
-                        <form action="" method="post">
+                        <form action="" method="post" enctype="multipart/form-data">
                             <input type="hidden" name="id" value="<?= $product['id']; ?>">
-                            <div class="mb-3 w-25">
-                                <label for="nim" class="form-label">No</label>
-                                <input type="text" class="form-control" name="no" id="no" maxlength="9" autofocus required value="<?= $product['no']; ?>">
-                            </div>
                             <div class="mb-3">
                                 <label for="gambar" class="form-label">Picture</label>
-                                <input type="text" class="form-control" name="gambar" id="gambar" value="<?= $product['gambar']; ?>">
+                                <input type="file" class="form-control" name="gambar" id="gambar" >
+                                <input type="hidden" name="gambar-lama" value="<?= $product['gambar']; ?>">
                             </div>
                             <div class="mb-3">
                                 <label for="nama" class="form-label">Name</label>

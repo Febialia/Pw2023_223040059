@@ -28,8 +28,10 @@ function ubah($data)
 {
   $conn = koneksi();
   $id = $data['id'];
-  $no = htmlspecialchars($data['no']);
-  $gambar = htmlspecialchars($data['gambar']);
+  $gambar = upload();
+  if (!$gambar) {
+    $gambar = $data['gambar-lama'];
+  }
   $nama = htmlspecialchars($data['nama']);
   $harga = htmlspecialchars($data['harga']);
 
@@ -38,8 +40,7 @@ function ubah($data)
   $query = "UPDATE  
               products 
             SET
-          
-            no = '$no',
+
             gambar = '$gambar',
             nama ='$nama',
             harga = '$harga'
@@ -86,20 +87,62 @@ function tambah($data)
 {
   $conn = koneksi();
 
-  $no = htmlspecialchars($data['no']);
-  $gambar = htmlspecialchars($data['gambar']);
+ 
+  $gambar = upload();
   $nama = htmlspecialchars($data['nama']);
   $harga = htmlspecialchars($data['harga']);
 
   $query = "INSERT INTO
  products
- VALUES (null, '$no', '$gambar', '$nama', '$harga', '1') ";
+ VALUES (null, '$gambar', '$nama', '$harga', '1') ";
 
   mysqli_query($conn, $query) or die(mysqli_error($conn));
 
   return mysqli_affected_rows($conn);
 }
 
+// upload foto //
+function upload()
+{
+  $name_file = $_FILES['gambar']['name'];
+  $type_file = $_FILES['gambar']['type'];
+  $size_file = $_FILES['gambar']['size'];
+  $error = $_FILES['gambar']['error'];
+  $tmp_file = $_FILES['gambar']['tmp_name'];
+
+  // check file existence
+  if ($error == 4) {
+    return false;
+  }
+
+  // chect name file
+  $list_type = ['jpg', 'jpeg', 'png'];
+  $file_extension = explode('.', $name_file);
+  $file_extension = strtolower(end($file_extension));
+  if (!in_array($file_extension, $list_type)) {
+    return false;
+  }
+
+  // check type file
+  if ($type_file != 'image/jpeg' && $type_file != 'image/png') {
+    return false;
+  }
+
+  // check size file
+  // 5mb
+  if ($size_file > 5000000) {
+    return false;
+  }
+
+  // ready for upload
+  // generate new name file
+  $new_name_file = uniqid();
+  $new_name_file .= '.';
+  $new_name_file .= $file_extension;
+  move_uploaded_file($tmp_file, '../img/upload/' . $new_name_file);
+
+  return $new_name_file;
+}
 
 
 // ubah user //
@@ -163,12 +206,13 @@ function contactus($data)
 {
   $conn = Koneksi();
   $name = htmlspecialchars($data['name']);
+  $message = htmlspecialchars($data['message']);
   $email = htmlspecialchars($data['email']);
   $number = htmlspecialchars($data['number']);
 
   $query = "INSERT INTO
   contactus
-  VALUES (null, '$name', '$email', '$number') ";
+  VALUES (null, '$name', '$message', '$email', '$number') ";
   mysqli_query($conn, $query) or die(mysqli_error($conn));
   return mysqli_affected_rows($conn);
 }

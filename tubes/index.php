@@ -267,7 +267,8 @@ include 'partials/header.php'; ?>
         <p>You need anything please contact us
         </p>
         <form action="" method="post">
-          <input name="name" class="form-control" type="text" placeholder="Name" aria-label="default input example"><br>
+          <input name="name" class="form-control" type="name" placeholder="Name" aria-label="default input example"><br>
+          <input name="message" class="form-control" type="text" placeholder="Message" aria-label="default input example"><br>
           <input name="email" class="form-control" type="email" placeholder="Email" aria-label="default input example"><br>
           <input name="number" class="form-control" type="number" placeholder="Number" aria-label="default input example"><br>
           <button type="submit" name="send" id="contact-btn">Send Message</button>
